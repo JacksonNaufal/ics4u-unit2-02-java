@@ -8,9 +8,11 @@ public class JacksonStacks {
         public void push(int userInt) {
                 stackNum.add(userInt);
         }
+        public void PoppedNumber(int userInt) {
+                stackNum.pop(userInt);
+        }
         
         public void finishedStack() {
                 System.out.println(stackNum);       
       }
-
     }
