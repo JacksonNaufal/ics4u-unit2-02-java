@@ -32,23 +32,26 @@ final class Main {
     * @param args No args will be used
     */
     public static void main(final String[] args) {
-        // This is a stack program:w
-        
+
+        int counter;
+        final int arrayPopped;
+
+        // This is a stack program
             final Scanner userInt = new Scanner(System.in);
             final Scanner removeInt = new Scanner(System.in);
             final JacksonStacks stackNum = new JacksonStacks();
-
+        for (counter = 0; counter < 5; counter++) {
             System.out.print("Enter a number!: ");
             final int userInput = userInt.nextInt();
             stackNum.push(userInput);
-
-            System.out.print("Remove, y/n: ");
-            final String removeInt = removeInt.nextString();
-            stackNum.pop(userInput);
+        }
 
             stackNum.finishedStack();
 
+            arrayPopped = stackNum.pop();
+            stackNum.finishedStack();
             System.out.print("\nDone!");
-}
-}
+        }
+    }
+
 
