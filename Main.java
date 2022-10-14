@@ -11,7 +11,16 @@
 
 import java.util.Scanner;
 
+/**
+ * This is the main class.
+ * Class Main
+ */
 final class Main {
+
+    /**
+     * This is the max for the for loop.
+     */
+    public static final int MAX = 5;
 
     /**
     * Prevent instantiation.
@@ -33,25 +42,26 @@ final class Main {
     */
     public static void main(final String[] args) {
 
-        int counter;
         final int arrayPopped;
 
         // This is a stack program
-            final Scanner userInt = new Scanner(System.in);
-            final Scanner removeInt = new Scanner(System.in);
-            final JacksonStacks stackNum = new JacksonStacks();
-        for (counter = 0; counter < 5; counter++) {
+        final Scanner userInt = new Scanner(System.in);
+        final Scanner removeInt = new Scanner(System.in);
+        final JacksonStacks stackNum = new JacksonStacks();
+        for (int counter = 0; counter < MAX; counter++) {
             System.out.print("Enter a number!: ");
             final int userInput = userInt.nextInt();
             stackNum.push(userInput);
         }
 
-            stackNum.finishedStack();
+        stackNum.finishedStack();
 
-            arrayPopped = stackNum.pop();
-            stackNum.finishedStack();
-            System.out.print("\nDone!");
-        }
+        System.out.println("The new array is");
+        System.out.println("Calculating...");
+
+        arrayPopped = stackNum.pop();
+        stackNum.finishedStack();
+
+        System.out.print("\nDone!");
     }
-
-
+}
