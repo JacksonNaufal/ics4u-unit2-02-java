@@ -1,6 +1,6 @@
 /*
-* This is a program that calculates mean, median and mode
-* after reading in a text file into an array.
+* This is a program that calculates the pop
+* from JacksonStack
 *
 * @author  Jackson Naufal
 * @version 1.0
