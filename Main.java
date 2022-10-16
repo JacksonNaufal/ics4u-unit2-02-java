@@ -48,20 +48,29 @@ final class Main {
         final Scanner userInt = new Scanner(System.in);
         final Scanner removeInt = new Scanner(System.in);
         final JacksonStacks stackNum = new JacksonStacks();
-        for (int counter = 0; counter < MAX; counter++) {
+        // Input user loop.
+        while (true) {
             System.out.print("Enter a number!: ");
             final int userInput = userInt.nextInt();
-            stackNum.push(userInput);
+            if (userInput == -1) {
+                break;
+            } else {
+                stackNum.push(userInput);
+            }
         }
 
+        // Shows the first stack.
         stackNum.finishedStack();
 
+        // Before the new popped array.
         System.out.println("The new array is");
         System.out.println("Calculating...");
 
+        // Shows the popped array.
         arrayPopped = stackNum.pop();
         stackNum.finishedStack();
 
+        // End of program.
         System.out.print("\nDone!");
     }
 }
